@@ -5,7 +5,7 @@ function Homepage() {
       <div className="Homepage">
         <header className="Homepage-header">
           <p>
-            Hello World
+            Homepage
           </p>
         </header>
       </div>
