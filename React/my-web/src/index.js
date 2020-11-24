@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Homepage from './Homepage';
+import './css/index.css';
+import Home from './components/Home';
 import Intro from './Intro';
 import reportWebVitals from './reportWebVitals';
 

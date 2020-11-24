@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Homepage from './Homepage';
-import './Intro.css';
+import App from './App';
+import './css/Intro.css';
 
 
 class Intro extends React.Component {
@@ -38,7 +38,7 @@ class Intro extends React.Component {
     render() {   
         let flag = this.state.flag;
         if (flag == 3) {
-            return <Homepage />
+            return <App />
         }
         else {
             return ( 
