@@ -30,7 +30,7 @@ def rock_paper_scissors(human):
 def prompt():
     print("Rock(0), paper(1), scissors(2) | Enter 'q' to quit")
     human = input("Enter number: ")
-    print(rock_paper_scissors(human))
+    rock_paper_scissors(human)
 
 
 prompt()
