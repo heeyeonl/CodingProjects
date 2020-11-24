@@ -1,35 +1,54 @@
 import random
 
-def message_computer(computer):    
+def print_message(msg, computer):
+    if msg == 'win':
+        print("You win! Computer gave", computer)
+    elif msg == 'lost':
+        print("You lost... Computer gave", computer)
+    else:
+        print("error in print_message")
+
+def computer_gives(computer):    
     switch = {
-        0: "Computer: Rock",
-        1: "Comptuer: Paper",
-        2: "Computer: Scissors"      
+        0: "rock",
+        1: "paper",
+        2: "scissors"      
     }
-    print(switch.get(computer))
+    return switch.get(computer)
 
 def rock_paper_scissors(human):
+    human = human.lower()
     if human == 'q':
-        return ""
-    human = int(human)
-    computer = random.randint(0,2)
-    message_computer(computer)
+        return print("Exit")
+
+    computer = computer_gives(random.randint(0,2))
     
     if human == computer:
-        print("Tie")
-    elif (human == 0 and computer == 1) or (human == 1 and computer == 2) or (human == 2 and computer == 0):
-        print("You lost!")
-    elif (human == 0 and computer == 2) or (human == 1 and computer == 0) or (human == 2 and computer == 1):
-        print("You win!")
+        print("Tie!")
+    elif human == 'rock':
+        if computer == 'scissors':
+            print_message('win', computer)
+        else:
+            print_message('lost', computer)
+    elif human == 'paper':
+        if computer == 'rock':
+            print_message('win', computer)
+        else:
+            print_message('lost', computer)
+    elif human == 'scissors':
+        if computer == 'paper':
+            print_message('win', computer)
+        else:
+            print_message('lost', computer)
     else:
-        print("error", human, computer)
+        print("Invalid input! Check your spelling.")
 
     return prompt()
     
 
 def prompt():
-    print("Rock(0), paper(1), scissors(2) | Enter 'q' to quit")
-    human = input("Enter number: ")
+    print("Rock, paper, scissors | Enter 'q' to quit")
+    human = input("Enter: ")
     rock_paper_scissors(human)
 
 
