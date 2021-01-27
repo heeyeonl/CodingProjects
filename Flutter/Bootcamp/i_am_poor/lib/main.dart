@@ -8,6 +8,9 @@ void main() {
           title: Text('I am Poor'),
           backgroundColor: Colors.blueGrey[300],
         ),
+        body: Center(
+          child: Image(image: AssetImage('images/piggybank.jpg')),
+        ),
       ),
     ),
   );
